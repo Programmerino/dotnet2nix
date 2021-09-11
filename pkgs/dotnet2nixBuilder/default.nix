@@ -1,4 +1,4 @@
-{ stdenv, libunwind, libuuid, icu, openssl, zlib, curl, makeWrapper, callPackage, linkFarm, runCommand, autoPatchelfHook }:
+{ stdenv, libunwind, libuuid, icu, openssl, zlib, curl, makeWrapper, callPackage, linkFarm, runCommand, autoPatchelfHook, lib }:
 { pname
   , version
   , src
@@ -7,7 +7,6 @@
   , mono ? ""
   , project ? ""
   , configuration ? "Release"
-  , lib ? pkgs.lib
   , meta ? {}
   , nugetPackagesJson
   , buildInputs? []
