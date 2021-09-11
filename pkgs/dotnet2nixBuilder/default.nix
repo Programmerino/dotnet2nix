@@ -7,6 +7,7 @@
   , mono ? ""
   , project ? ""
   , configuration ? "Release"
+  , lib ? pkgs.lib
   , meta ? {}
   , nugetPackagesJson
   , buildInputs? []
