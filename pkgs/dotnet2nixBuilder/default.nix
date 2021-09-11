@@ -33,7 +33,7 @@ let args = builtins.removeAttrs args' [ "buildInputs" ];
     }) packageInfos;
     nugetSource = linkFarm "${pname}-packages" nugetPackages;
     buildInputs' = [ openssl openssl_1_0_symlinks stdenv.cc.cc ] ++ buildInputs;
-    rpath = stdenv.lib.makeLibraryPath buildInputs';
+    rpath = lib.makeLibraryPath buildInputs';
 in 
 stdenv.mkDerivation (args // {
   name = "${pname}-${version}";
